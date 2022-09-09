@@ -1,29 +1,48 @@
 <!doctype html>
 <html>
 	<head>
-	
+
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
-	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600&display=swap" rel="stylesheet">
+
 	<title>{{#resume.basics}}{{name}}{{/resume.basics}}</title>
 
 	<style>
 	{{{css}}}
 	</style>
-	
+
 	</head>
 	<body>
-	
-	<div id="resume">
-		{{> basics }}
-		{{> work }}
-		{{> volunteer }}
-		{{> education }}
-		{{> awards }}
-		{{> publications }}
-		{{> skills }}
-		{{> languages }}
-		{{> interests }}
-		{{> references }}
+
+	<div id="wrapper">
+		<div id="resume">
+			<div id="header">
+				<h1>{{#resume.basics}}{{name}}{{/resume.basics}}</h1>
+				<h2>{{#resume.basics}}{{label}}{{/resume.basics}}</h1>
+			</div>
+
+			<div id="main-content">
+				<h2>Profile</h2>
+				<div class="content-block">
+					{{#resume.basics}}{{summary}}{{/resume.basics}}
+				</div>
+
+				{{> work}}
+				{{> education }}
+				{{> awards }}
+				{{> publications }}
+			</div>
+			<div id="sidebar">
+				{{> details }}
+				{{> languages }}
+				{{> interests }}
+				{{> skills }}
+				{{> volunteer }}
+				{{> references }}
+			</div>
+		</div>
 	</body>
 </html>
