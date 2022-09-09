@@ -1,20 +1,25 @@
 var fs = require("fs");
+var path = require('path');
 var Handlebars = require("handlebars");
 
 function render(resume) {
 	var css = fs.readFileSync(__dirname + "/style.css", "utf-8");
-	var template = fs.readFileSync(__dirname + "/resume.template", "utf-8");
-	// var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-	var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+	var tpl = fs.readFileSync(__dirname + "/resume.hbs", "utf-8");
+	var partialsDir = path.join(__dirname, 'partials');
+	var filenames = fs.readdirSync(partialsDir);
 
-	// Nicer dates
-	Handlebars.registerHelper('date', function(date) {
-	  var theDate = new Date(date);
+	filenames.forEach(function (filename) {
+	  var matches = /^([^.]+).hbs$/.exec(filename);
+	  if (!matches) {
+	    return;
+	  }
+	  var name = matches[1];
+	  var filepath = path.join(partialsDir, filename)
+	  var template = fs.readFileSync(filepath, 'utf8');
 
-	  return months[theDate.getMonth()] + ' ' + theDate.getFullYear();
+	  Handlebars.registerPartial(name, template);
 	});
-
-	return Handlebars.compile(template)({
+	return Handlebars.compile(tpl)({
 		css: css,
 		resume: resume
 	});
