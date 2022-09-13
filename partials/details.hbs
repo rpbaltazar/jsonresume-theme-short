@@ -4,7 +4,7 @@
     {{#if website}}
     <div class="website">
       <strong>Website</strong>
-      {{website}}
+      <a href={{website}}>{{website}}</a>
     </div>
     {{/if}}
     {{#if email}}
@@ -25,21 +25,9 @@
   <section id="profiles">
     {{#each profiles}}
     <div class="item">
-      {{#if network}}
       <strong class="network">
-        {{network}}
+        {{network}} - <a href={{url}}>{{username}}</a>
       </strong>
-      {{/if}}
-      {{#if username}}
-      <div class="username">
-        {{username}}
-      </div>
-      {{/if}}
-      {{#if url}}
-      <div class="url">
-        <a href="{{url}}">Link</a>
-      </div>
-      {{/if}}
     </div>
     {{/each}}
   </section>

@@ -25,10 +25,12 @@
 			</div>
 
 			<div id="main-content">
-				<h2>Profile</h2>
-				<div class="content-block">
-					{{#resume.basics}}{{summary}}{{/resume.basics}}
-				</div>
+				<section id="profile-summary">
+					<h2>Profile</h2>
+					<div class="content-block">
+						{{#resume.basics}}{{summary}}{{/resume.basics}}
+					</div>
+				</section>
 
 				{{> work}}
 				{{> education }}

@@ -1,6 +1,6 @@
 body {
 	background: #eaeef8;
-	font: 16px 'Montserrat';
+	font: 14px 'Montserrat';
 	line-height: 1.4;
 	margin: 0 0;
 	margin-bottom: 100px;
@@ -20,6 +20,18 @@ h3 {
 
 section h2,h3 {
 	text-transform: uppercase;
+	color: #1b4e68;
+	margin-bottom: 0.1em;
+}
+
+a {
+	color: #2C85B1;
+	text-decoration: none;
+	font-weight: 400;
+}
+
+a:hover {
+	color: #1b4e68;
 }
 
 #wrapper {
@@ -59,20 +71,21 @@ section h2,h3 {
 #sidebar h2 {
 	color: #E3B829;
 }
-/* em {
-	color: #999;
-}
-p {
-	line-height: 1.6;
-	font-size: 90%;
+
+#sidebar a {
+	color: #1b4e68;
 }
 
-a {
-	color: #2C85B1;
-	text-decoration: none;
-	font-weight: 400;
+#sidebar a:hover {
+	color: #9cafb8;
 }
-ul {
+
+/* p {
+	line-height: 1.6;
+	font-size: 90%;
+} */
+
+/* ul {
 	margin-bottom: 0;
 }
 section {
@@ -87,7 +100,7 @@ blockquote {
 /* section / line breaks */
 
 /* Experience items */
-.item {
+/* .item {
 	margin: 0 0 1em;
 	padding: 0 0 1em;
 	border-bottom: 1px solid #F2EBEC;
@@ -122,10 +135,10 @@ blockquote {
 .item .highlights {
 	list-style: square;
 	font-size: 90%;
-}
+} */
 
 /* skills */
-#skills .item {
+/* #skills .item {
 	margin: 0.5em 0;
 	padding: 0 0 0.5em;
 	font-size: 90%;
@@ -143,13 +156,13 @@ blockquote {
 #skills .item .keywords {
 	display: inline-block;
 	width: 70%;
-	vertical-align: top;
+	vertical-align: top; */
 }
 
 /* education */
-#education .item {
+/* #education .item {
 	display: inline-block;
 	vertical-align: top;
 	width: 49.5%;
 	border-bottom: 0;
-}
+} */
