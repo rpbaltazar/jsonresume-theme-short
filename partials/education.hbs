@@ -3,35 +3,33 @@
 	<h2>Education</h2>
 	{{#each resume.education}}
 	<div class="item">
+		{{#if institution}}
+		<h3 class="name">{{institution}}</h3>
+		{{/if}}
+
 		<div class="date">
 			{{#if startDate}}
-			<span class="startDate">
+			<span class="start-date">
 				{{startDate}}
 			</span>
 			{{/if}}
 			{{#if endDate}}
-			<span class="endDate">
+			<span class="end-date">
 				- {{endDate}}
 			</span>
 			{{else}}
-			<span class="endDate">
+			<span class="end-date">
 				- Present
 			</span>
 			{{/if}}
 		</div>
-		{{#if institution}}
-		<div class="institution">
-			{{institution}}
-		</div>
-		{{/if}}
-		{{#if area}}
-		<div class="area">
-			{{area}}
-		</div>
-		{{/if}}
 		{{#if studyType}}
-		<div class="studyType">
+		<div class="position">
+			{{#if area}}
+			{{studyType}} - {{area}}
+			{{else}}
 			{{studyType}}
+			{{/if}}
 		</div>
 		{{/if}}
 		{{#if gpa}}

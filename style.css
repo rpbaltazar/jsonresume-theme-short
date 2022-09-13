@@ -15,12 +15,15 @@ h2 {
 }
 
 h3 {
-	font-weight: 100;
+	font-weight: 400;
 }
 
-section h2,h3 {
+section h2, h3 {
 	text-transform: uppercase;
 	color: #1b4e68;
+}
+
+section h3 {
 	margin-bottom: 0.1em;
 }
 
@@ -80,27 +83,27 @@ a:hover {
 	color: #9cafb8;
 }
 
-#work .item {
+.item {
 	margin: 0 0 1em;
 	padding: 0 0 1em;
 	border-bottom: 1px solid #F2EBEC;
 }
 
-#work .item:last-child {
+.item:last-child {
 	border-bottom: none;
 }
 
-#work .item .position {
+.item .position {
 	font-weight: 600;
 	margin: 0.2em 1em 0.2em 0;
 }
 
-#work .item .start-date,
-#work .item .end-date {
+.item .start-date,
+.item .end-date {
 	color: #6B6B6B;
 }
 
-#work .item .highlights {
+.item .highlights {
 	list-style: square;
 	font-size: 0.9em;
 }
