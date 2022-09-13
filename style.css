@@ -80,6 +80,31 @@ a:hover {
 	color: #9cafb8;
 }
 
+#work .item {
+	margin: 0 0 1em;
+	padding: 0 0 1em;
+	border-bottom: 1px solid #F2EBEC;
+}
+
+#work .item:last-child {
+	border-bottom: none;
+}
+
+#work .item .position {
+	font-weight: 600;
+	margin: 0.2em 1em 0.2em 0;
+}
+
+#work .item .start-date,
+#work .item .end-date {
+	color: #6B6B6B;
+}
+
+#work .item .highlights {
+	list-style: square;
+	font-size: 0.9em;
+}
+
 /* p {
 	line-height: 1.6;
 	font-size: 90%;
@@ -98,44 +123,6 @@ blockquote {
 
 
 /* section / line breaks */
-
-/* Experience items */
-/* .item {
-	margin: 0 0 1em;
-	padding: 0 0 1em;
-	border-bottom: 1px solid #F2EBEC;
-}
-
-.item:last-child {
-	border-bottom: none;
-}
-
-
-.item header h3 {
-	margin: 0.2em 1em 0.2em 0;
-	display: inline-block;
-	font-weight: 600;
-}
-
-.item header a {
-	display: inline-block;
-}
-
-.item .position {
-	font-weight: 600;
-	font-size: 100%;
-	margin: 0.2em 1em 0.2em 0;
-}
-
-.item .startDate,
-.item .endDate {
-	color: #6B6B6B;
-}
-
-.item .highlights {
-	list-style: square;
-	font-size: 90%;
-} */
 
 /* skills */
 /* #skills .item {
@@ -157,7 +144,7 @@ blockquote {
 	display: inline-block;
 	width: 70%;
 	vertical-align: top; */
-}
+/* } */
 
 /* education */
 /* #education .item {
