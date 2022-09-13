@@ -83,6 +83,10 @@ a:hover {
 	color: #9cafb8;
 }
 
+.dark-text {
+	color: #1b4e68;
+}
+
 .item {
 	margin: 0 0 1em;
 	padding: 0 0 1em;

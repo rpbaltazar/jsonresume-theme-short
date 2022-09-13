@@ -4,27 +4,28 @@
 	{{#each resume.publications}}
 	<div class="item">
 		{{#if name}}
-		<div class="name">
-			{{name}}
-		</div>
+		<h3 class="name">
+			{{#if website}}
+				<a href={{website}}>{{name}}</a>
+			{{else}}
+				{{name}}
+			{{/if}}
+		</h3>
 		{{/if}}
-		{{#if publisher}}
-		<div class="publisher">
-			{{publisher}}
-		</div>
-		{{/if}}
+
 		{{#if releaseDate}}
-		<div class="releaseDate">
+		<div class="date">
 			{{releaseDate}}
 		</div>
 		{{/if}}
-		{{#if website}}
-		<div class="website">
-			<a href="{{website}}">Link</a>
+
+		{{#if publisher}}
+		<div class="position">
+			{{publisher}}
 		</div>
 		{{/if}}
 		{{#if summary}}
-		<div class="summary">
+		<div class="highlights">
 			<p>{{summary}}</p>
 		</div>
 		{{/if}}
