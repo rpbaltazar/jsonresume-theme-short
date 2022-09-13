@@ -4,22 +4,25 @@
 	{{#each resume.awards}}
 	<div class="item">
 		{{#if title}}
-		<div class="title">
+		<h3 class="title">
 			{{title}}
-		</div>
+		</h3>
 		{{/if}}
+
 		{{#if date}}
 		<div class="date">
 			{{date}}
 		</div>
 		{{/if}}
+
 		{{#if awarder}}
-		<div class="awarder">
+		<div class="position">
 			{{awarder}}
 		</div>
 		{{/if}}
+
 		{{#if summary}}
-		<div class="summary">
+		<div class="highlights">
 			<p>{{summary}}</p>
 		</div>
 		{{/if}}

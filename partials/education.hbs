@@ -38,11 +38,13 @@
 		</div>
 		{{/if}}
 		{{#if courses.length}}
-		<ul class="courses">
-			{{#each courses}}
-			<li>{{.}}</li>
-			{{/each}}
-		</ul>
+		<div class="highlights">
+			<ul class="courses">
+				{{#each courses}}
+				<li>{{.}}</li>
+				{{/each}}
+			</ul>
+		</div>
 		{{/if}}
 	</div>
 	{{/each}}
