@@ -4,7 +4,13 @@
 	{{#each resume.education}}
 	<div class="item">
 		{{#if institution}}
-		<h3 class="name">{{institution}}</h3>
+		<h3 class="name">
+		{{#if url}}
+			<a href={{url}}>{{institution}}</a>
+		{{else}}
+			{{institution}}
+		{{/if}}
+		</h3>
 		{{/if}}
 
 		<div class="date">
