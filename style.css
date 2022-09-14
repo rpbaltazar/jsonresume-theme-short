@@ -129,3 +129,13 @@ a:hover {
 	list-style: square;
 	font-size: 0.9em;
 }
+ul.keywords {
+	padding: 0;
+}
+
+ul.keywords > li {
+	display: inline-block;
+	background-color: #1b4e68;
+	padding: 4px 6px 4px 6px;
+	border-radius: 4px;
+}
