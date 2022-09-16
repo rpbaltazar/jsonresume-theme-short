@@ -52,20 +52,44 @@ a:hover {
 #header {
 	text-align: center;
 	background: #ced;
-	grid-column: 1/4;
 	background: #5B7DA4;
 	color: #fff;
+	grid-area: header;
+}
+
+#mobile-details {
+	grid-area: mobile-details;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
 }
 
 #resume {
 	display: grid;
-	grid-template-columns: 2fr 1fr;
-	grid-auto-rows: minmax(100px, auto);
+	grid-template-areas:
+		"header"
+		"mobile-details"
+		"content"
+		"sidebar";
+}
+
+@media (min-width: 850px) {
+	#mobile-details {
+		display: none;
+	}
+
+	#resume {
+		display: grid;
+		grid-template-areas:
+			"header header"
+			"mobile-details mobile-details"
+			"content sidebar";
+	}
 }
 
 #main-content {
 	grid-column: 1 / 3;
 	padding: 50px;
+	grid-area: content;
 }
 
 #sidebar {
@@ -73,6 +97,7 @@ a:hover {
 	grid-column: 3;
 	padding: 50px;
 	color: #fff;
+	grid-area: sidebar;
 }
 
 #sidebar h2 {
